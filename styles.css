@@ -181,6 +181,9 @@ padding-top: 8px;
 
 .language {
 width: 25%;
+display: flex;
+justify-content: center;
+position: relative;
 }
 
 .language__img--wrapper {
@@ -198,4 +201,11 @@ width: 25%;
 
 .language__name {
     position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transform: all 300ms;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
 }
