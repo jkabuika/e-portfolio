@@ -214,6 +214,10 @@ position: relative;
 
 /* PROJECTS */
 
+.project {
+    margin-bottom: 135px;
+}
+
 .project__img {
     width: 100%;
     transition: all 500ms ease;
@@ -251,6 +255,8 @@ position: relative;
 
 .project:hover .project__description {
     opacity: 1;
+    transform: translateY(-50%);
+
 }
 
 .project__list {
@@ -260,10 +266,12 @@ position: relative;
 .project__description {
     position: absolute;
     top: 50%;
-    left: 90px;
-    transform: translateX(-50%);
-    min-width: 550px;
+    left: 90px; 
+    transform: translateY(100%);
+    max-width: 550px;
     z-index: 3;
+    opacity: 0;
+    transition: transform 450ms, opacity 300ms;
 }
 
 .project__description--title {
@@ -272,6 +280,11 @@ position: relative;
 
 .project__description--para {
     margin: 16px 0;
+}
+
+.project__description--link {
+    font-size: 20px;
+    margin-right: 15px;
 }
 
 .project__description--title,
